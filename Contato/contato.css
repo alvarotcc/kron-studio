@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url(/assets/plasma4.jpg);
+    background-image: url(assets/plasma4.jpg);
     color: #f4d400;
     font-family: Arial, sans-serif;
     display: flex;
