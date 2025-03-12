@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #b52121;
+    background-image: url(../assets/plasma4.jpg);
     color: #f4d400;
     font-family: Arial, sans-serif;
     display: flex;
@@ -69,28 +69,30 @@ a.main-button:hover {
 
 /* Estilo das redes sociais */
 #redes-sociais {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    color: #f4d400;
     text-align: center;
-    font-size: 15px;
-    z-index: 10; /* Garante que os ícones de redes sociais fiquem visíveis */
-    position: relative; /* Permite que os ícones se ajustem corretamente */
+    font-size: 22px;
+
 }
 
 .social-icons a {
     font-size: 30px;
     margin: 0 15px;
     transition: transform 0.3s;
-    text-decoration: none; /* Removendo qualquer estilo de botão nos links de redes sociais */
 }
 
-.social-icons a:hover {
-    transform: scale(1.1);
-}
 
 .social-icons img {
     margin-top: 15px;
     width: 30px;
     height: 30px;
+}
+.social-icons img:hover {
+    transform: scale(1.5);
 }
 
 /* ---------------------------------- FOOTER ---------------------------------- */
@@ -99,13 +101,13 @@ a.main-button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.016);
     color: white;
 }
 
 footer a {
     color: #f4d400;
-    text-decoration: none; /* Sem estilo de botão no link do footer */
+    text-decoration: none;
 }
 
 footer a:hover {
@@ -116,57 +118,17 @@ footer a:hover {
 
 @media (max-width: 768px) {
     /* Exibe o ícone do menu no mobile */
-    .menu-icon {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%); /* Centraliza o ícone */
-        z-index: 10;
-    }
 
-    /* Menu oculto no mobile */
-    nav ul {
-        display: none; /* Oculta os itens do menu no mobile */
-    }
 
-    /* Quando o menu estiver ativo, ele será mostrado */
-    nav.active ul {
-        display: flex; /* Exibe os itens de menu */
-        flex-direction: column; /* Alinha os itens de forma vertical */
-        align-items: center;
-        margin-top: 60px;
-        background-color: rgba(0, 0, 0, 0.01);
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 20px;
-        z-index: 100;
-    }
-
-    /* Ajusta o layout das fotos para 2 colunas no mobile */
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Redes sociais não ficam atrás do footer */
     #redes-sociais {
-        position: relative;
-        z-index: 100;
-        margin-bottom: 60px; /* Garante que a seção de redes sociais não seja coberta pelo footer */
+        font-size: 15px;
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+    
     }
 
-    /* Estilos para versão mobile */
-    .contato-container {
-        flex-direction: column; /* Em dispositivos móveis, o endereço fica acima do mapa */
-    }
-
-    .mapa iframe {
-        height: 200px;
-    }
+    
 }
 
 /* Animação de fade in */
