@@ -10,5 +10,21 @@
         <source src="assets/Black Sabbath - Paranoid.mp3" type="audio/mpeg">
         Seu navegador não suporta a tag de áudio.
     </audio>
+
+    <script>
+        // Verifica se o áudio estava pausado e retoma de onde parou
+        const audioPlayer = document.getElementById("audio-player");
+
+        // Verifica se o LocalStorage tem o tempo de reprodução armazenado
+        const savedTime = localStorage.getItem('audioTime');
+        if (savedTime) {
+            audioPlayer.currentTime = savedTime; // Se sim, continua de onde parou
+        }
+
+        // Sempre que a música for pausada ou terminar, salva o tempo no LocalStorage
+        audioPlayer.addEventListener('timeupdate', function() {
+            localStorage.setItem('audioTime', audioPlayer.currentTime);
+        });
+    </script>
 </body>
 </html>
