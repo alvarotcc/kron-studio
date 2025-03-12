@@ -1,0 +1,187 @@
+/* RESET DE ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b52121;
+    color: #f4d400;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o body ocupe toda a altura da tela */
+}
+
+/* Centralizando logo no topo */
+header {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px 0;
+    background-color: #00000067;
+}
+
+header .logo img {
+    height: 80px; /* Ajuste o tamanho da logo conforme necessário */
+}
+
+/* Estilo do conteúdo principal (centralizado) */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do main */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+/* Estilizando apenas o <a> principal como botão */
+a.main-button {
+    display: inline-block;
+    background-color: #f4d400;
+    color: #b52121;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.main-button:hover {
+    background-color: #e0b900;
+    transform: scale(1.1); /* Efeito de "aumento" ao passar o mouse */
+}
+
+/* ---------------------------------- REDES SOCIAIS ---------------------------------- */
+
+/* Estilo das redes sociais */
+#redes-sociais {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    z-index: 10; /* Garante que os ícones de redes sociais fiquem visíveis */
+    position: relative; /* Permite que os ícones se ajustem corretamente */
+}
+
+.social-icons a {
+    font-size: 30px;
+    margin: 0 15px;
+    transition: transform 0.3s;
+    text-decoration: none; /* Removendo qualquer estilo de botão nos links de redes sociais */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    margin-top: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+/* ---------------------------------- FOOTER ---------------------------------- */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    color: #f4d400;
+    text-decoration: none; /* Sem estilo de botão no link do footer */
+}
+
+footer a:hover {
+    color: white; /* Muda a cor do link ao passar o mouse */
+}
+
+/* ---------------------------------- ESTILOS PARA VERSÃO MOBILE ---------------------------------- */
+
+@media (max-width: 768px) {
+    /* Exibe o ícone do menu no mobile */
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza o ícone */
+        z-index: 10;
+    }
+
+    /* Menu oculto no mobile */
+    nav ul {
+        display: none; /* Oculta os itens do menu no mobile */
+    }
+
+    /* Quando o menu estiver ativo, ele será mostrado */
+    nav.active ul {
+        display: flex; /* Exibe os itens de menu */
+        flex-direction: column; /* Alinha os itens de forma vertical */
+        align-items: center;
+        margin-top: 60px;
+        background-color: rgba(0, 0, 0, 0.01);
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        z-index: 100;
+    }
+
+    /* Ajusta o layout das fotos para 2 colunas no mobile */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Redes sociais não ficam atrás do footer */
+    #redes-sociais {
+        position: relative;
+        z-index: 100;
+        margin-bottom: 60px; /* Garante que a seção de redes sociais não seja coberta pelo footer */
+    }
+
+    /* Estilos para versão mobile */
+    .contato-container {
+        flex-direction: column; /* Em dispositivos móveis, o endereço fica acima do mapa */
+    }
+
+    .mapa iframe {
+        height: 200px;
+    }
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para telas muito pequenas (ex: smartphones pequenos) */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 foto por linha */
+    }
+}
