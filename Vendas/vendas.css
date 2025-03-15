@@ -189,7 +189,7 @@ h1 {
 
 /* ---------------------------------- MODAL ---------------------------------- */
 
-/* Estilos do Modal (alterados conforme solicitação) */
+/* Estilos do Modal */
 .modal {
     display: none;
     position: fixed;
@@ -201,7 +201,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
     overflow: auto;
     display: none;
-    padding: 50px;
+    padding: 30px;
 }
 
 .modal-content {
